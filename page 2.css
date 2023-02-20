@@ -5,16 +5,11 @@
     /* border: 1px solid red; */
 }
 body {
-    background-color: rgb(68, 63, 57);
+    background: url(./assets/img/pexels-pixabay-73873.jpg) center/cover;
+    background-attachment: fixed;
 }
-/* .background {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-    background: url(./assets/img/fond.png) center/cover;
-   
-} */
+
+
 /* NAVBAR */
 
 #navbar {
@@ -43,6 +38,7 @@ body {
     z-index: -1;
     transition: 0.75s;
     transform: translateX(-50%);
+    border: 2px solid black;
 }
 #logo, .alt-logo {
     height: 90px;
@@ -64,7 +60,7 @@ body {
     filter: contrast(120%);
 }
 #band-logo-name {
-    height: 32px;
+    height: 25px;
     position: absolute;
     rotate: 90deg;
     top: 86px;
@@ -319,17 +315,26 @@ body {
   }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(5, 20%);
-    justify-content: center;
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr; 
+  gap: 10px 5px; 
+  grid-template-areas: 
+    ". a ."
+    "b c d"
+    "e f g"
+    ". h ."; 
     text-align: center;
-    width: 85vw;
+    width: 96%;
     top: 210px;
     position: absolute;
+    justify-items: center;
     z-index: -15;
     height: 70%;
     grid-gap: 10px;
-    margin-left: 10%;
+    left: 2%;
   }
 .plats {
     width: 100%;
@@ -338,30 +343,87 @@ body {
     border: 5px solid black;
     position: relative;
     top: 10px;
-   
 }
 .plat {
     margin-bottom: 10%;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: content-box;
-    display: grid;
-    width: 85%;
+    width: 75%;
+    animation: bounce-in-top 1.1s both;
+
 }
+
+#p1 {
+  grid-area: a;
+}
+#p2 {
+  grid-area: b;
+}
+#p3 {
+  grid-area:  c;
+}
+#p4 {
+  grid-area:  d;
+}
+#p5 {
+  grid-area: e ;
+}
+#p6 {
+  grid-area: f ;
+}
+#p7 {
+  grid-area:  g;
+}
+#p8 {
+  grid-area: h ;
+} 
 
 
 li {
     color: rgb(255, 255, 255);
     margin-bottom: 3px;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: 400;
+    font-family: 'Teko', sans-serif;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 h2 {
     color: rgb(0, 0, 0);
-    font-size: 1.5em;
+    font-size: 2.5em;
     font-weight: 600;
+    font-family: 'Teko', sans-serif;
     top: 15px;
     position: relative;
+    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 ul {
     position: relative;
@@ -388,3 +450,47 @@ ul {
     text-align: right;
   }
 }
+
+/**
+ * ----------------------------------------
+ * animation bounce-in-top
+ * ----------------------------------------
+ */
+ 
+@keyframes bounce-in-top {
+  0% {
+            transform: translateY(-500px);
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+            transform: translateY(0);
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+            transform: translateY(-65px);
+            animation-timing-function: ease-in;
+  }
+  72% {
+            transform: translateY(0);
+            animation-timing-function: ease-out;
+  }
+  81% {
+            transform: translateY(-28px);
+            animation-timing-function: ease-in;
+  }
+  90% {
+            transform: translateY(0);
+            animation-timing-function: ease-out;
+  }
+  95% {
+            transform: translateY(-8px);
+            animation-timing-function: ease-in;
+  }
+  100% {
+            transform: translateY(0);
+            animation-timing-function: ease-out;
+  }
+}
+
