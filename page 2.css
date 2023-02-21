@@ -355,6 +355,10 @@ body {
     -10px 0 80px rgb(255, 255, 255),        /* outer left magenta */
     10px 0 80px rgb(2, 3, 3);         /* outer right cyan */
 }
+a {
+  animation-timing-function:ease-in-out;
+  animation-duration: 3000ms;
+}
 .plat {
     margin-bottom: 10%;
     width: 75%;
