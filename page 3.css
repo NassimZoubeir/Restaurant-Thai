@@ -1,0 +1,437 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .background {
+    background: url(./assets/img/thai_night_2.jpg) ;
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    position: absolute;
+    z-index: -3;
+    animation: bg-pan-tl 3.5s infinite alternate-reverse both;
+  }
+  
+  @keyframes bg-pan-tl {
+    0% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  #navbar {
+    width: 100vw;
+    position: absolute;
+    height: 70px;
+    background: white;
+    align-items: center;
+    display: flex;
+  }
+  
+  #restau-name{
+    position: absolute;
+    left: 10vw;
+    height: 2rem;
+  }
+  
+  .band {
+    height: 300px;
+    width: 110px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    border-radius: 0 0 100px 100px;
+    left: 50%;
+    top: -126px;
+    z-index: -1 ;
+    transition: 0.75s;
+    transform: translateX(-50%);
+    border: 2px solid black;
+  }
+  #logo, .alt-logo {
+    height: 90px;
+    position: absolute;
+    bottom: 5px;
+    border-radius: 100px;
+  }
+  .alt-logo {
+    height: 70px;
+    border-radius: 0;
+    border: 0;
+    bottom: 20px;
+  }
+  #logo:hover {
+    filter: contrast(300%);
+    box-shadow: 3px 3px 3px gray;
+  }
+  .alt-logo:hover {
+    filter: contrast(120%);
+  }
+  #band-logo-name {
+    height: 32px;
+    position: absolute;
+    rotate: 90deg;
+    top: 86px;
+  }
+  .alt-logo-name {
+    height: 190px;
+    position: absolute;
+    top: 5px;
+  }
+  .band:hover {
+    top: 66px;
+    transition: 0.75s;
+  }
+  
+  #band-home {
+    position: absolute;
+    left: 62.5%;
+    background-color: #3E5BF0;
+  }
+  #band-plats {
+    left: 75%;
+  }
+  #band-contact {
+    left: 87.5%;
+    background-color: #FF0000;
+  }
+  .alt-band {
+    width: 90px;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    #navbar {
+        height: 50px;
+    }
+    .band {
+      height: 220px;
+      width: 105px;
+      top: -82px;
+      border-radius: 0 0 50px 50px;
+    }
+    #logo {
+      height: 75px;
+      bottom: 6px;
+    }
+    .alt-logo {
+      height: 62px;
+      bottom: 18px;
+    }
+    #band-logo-name {
+      height: 22px;
+      top: 57px;
+    }
+    .alt-logo-name {
+      height: 126px;
+      top: 8px;
+    }
+    .alt-band {
+      width: 75px;
+    }
+    #band-home {
+        left: 65%;
+    }
+    #band-plats {
+        left: 77.5%;
+    }
+    #band-contact {
+        left: 90%;
+    }
+    .band:hover {
+        top: 47px;
+    }
+  }
+  @media screen and (max-width: 780px) {
+    #navbar {
+        height: 40px;
+    }
+    #restau-name{
+        height: 1.25rem;
+    }
+    .band {
+      height: 190px;
+      width: 82px;
+      top: -85px;
+      border-radius: 0 0 40px 40px;
+    }
+    #logo {
+      height: 56px;
+      bottom: 5px;
+    }
+    .alt-logo {
+      height: 42px;
+      bottom: 14px;
+    }
+    #band-logo-name {
+      height: 19px;
+      top: 60px;
+    }
+    .alt-logo-name {
+      height: 107px;
+      top: 19px;
+    }
+    .alt-band {
+      width: 60px;
+    }
+    #band-home {
+        left: 65%;
+    }
+    #band-plats {
+        left: 77.5%;
+    }
+    #band-contact {
+        left: 90%;
+    }
+    .band:hover {
+        top: 27px;
+    }
+  }
+  @media screen and (max-width: 580px) {
+    #navbar {
+        height: 40px;
+    }
+    #restau-name{
+        height: 1.25rem;
+    }
+    .band {
+      height: 190px;
+      width: 68px;
+      top: -85px;
+      border-radius: 0 0 40px 40px;
+    }
+    #logo {
+      height: 53px;
+      bottom: 5px;
+    }
+    .alt-logo {
+      height: 38px;
+      bottom: 14px;
+    }
+    #band-logo-name {
+      height: 19px;
+      top: 60px;
+    }
+    .alt-logo-name {
+      height: 108px;
+      top: 17px;
+    }
+    .alt-band {
+      width: 48px;
+    }
+    #band-home {
+        left: 65%;
+    }
+    #band-plats {
+        left: 77.5%;
+    }
+    #band-contact {
+        left: 90%;
+    }
+    .band:hover {
+        top: 27px;
+    }
+  }
+  @media screen and (max-width: 460px) {
+    #navbar {
+        height: 40px;
+    }
+    #restau-name{
+        height: 1.25rem;
+    }
+    .band {
+      height: 180px;
+      width: 57px;
+      top: -85px;
+      border-radius: 0 0 40px 40px;
+    }
+    #logo {
+      height: 48px;
+      bottom: 5px;
+    }
+    .alt-logo {
+      height: 35px;
+      bottom: 14px;
+    }
+    #band-logo-name {
+      height: 18px;
+      top: 60px;
+    }
+    .alt-logo-name {
+      height: 100px;
+      top: 18px;
+    }
+    .alt-band {
+      width: 40px;
+    }
+    #band-home {
+        left: 65%;
+    }
+    #band-plats {
+        left: 77.5%;
+    }
+    #band-contact {
+        left: 90%;
+    }
+    .band:hover {
+        top: 27px;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    #navbar {
+        height: 35px;
+    }
+    #restau-name{
+        height: 1.25rem;
+    }
+    .band {
+      height: 170px;
+      width: 48px;
+      top: -85px;
+      border-radius: 0 0 40px 40px;
+    }
+    #logo {
+      height: 43px;
+      bottom: 5px;
+    }
+    .alt-logo {
+      height: 32px;
+      bottom: 10px;
+    }
+    #band-logo-name {
+      height: 18px;
+      top: 55px;
+    }
+    .alt-logo-name {
+      height: 95px;
+      top: 20px;
+    }
+    .alt-band {
+      width: 35px;
+    }
+    #band-home {
+        left: 65%;
+    }
+    #band-plats {
+        left: 77.5%;
+    }
+    #band-contact {
+        left: 90%;
+    }
+    .band:hover {
+        top: 27px;
+    }
+  }
+  
+  
+  .formulaire{
+    width: 25%;
+    height: 50%;
+    top: 30%;
+    left: 10%;
+    position: absolute;
+    animation: roll-in-left 0.75s ease-out both;
+  }
+  
+  
+  @keyframes roll-in-left {
+    0% {
+              transform: translateX(-800px) rotate(-540deg);
+      opacity: 0;
+    }
+    100% {
+              transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  .formu {
+    width: 90%;
+    margin: 5%;
+    height: auto;
+    display: flex;
+    background: #000;
+    opacity: 80%;
+    font-size: 2rem;
+    font-weight: 500;
+    border-radius: 20px;
+    border-color: #9F17CF;
+    color: white;
+  }
+  
+  .textarea {
+    min-width: 90%;
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 7%;
+    border-color: 2px #9F17CF;
+    border-bottom: 5px solid #9F17CF;
+    font-size: 2rem;
+    font-weight: 500;
+    top: 20px;
+    position: relative;
+    background-color: #000;
+    opacity: 50%;
+    color: white;
+  }
+  
+  .submit{
+    width: 35%;
+    height: 7%;
+  }
+  
+  input {
+    text-align: center;
+  }
+  
+  input[type=submit] {
+    left: 35%;
+    margin-top: 10%;
+    padding: 10px;
+    padding-bottom: 35px;
+    position: absolute; 
+    border-radius: 20px;
+    border-color: #9F17CF;
+    background-color: #000;
+    color: white;
+    font-weight: 600;
+  } 
+  
+  input[value] {
+    font-size: 1.5rem;
+  } 
+  
+  input::placeholder, textarea::placeholder {
+    color: white;
+    position: absolute;
+    left: 50%;
+    font-weight: 600;
+    transform: translateX(-50%);
+  }
+ 
+  #map {
+    width: 30%;
+    height: 40%;
+    position: absolute;
+    display: flex;
+    left: 57%;
+    top: 38%;
+    border-radius: 10%;
+    opacity: 90%;
+    z-index: -2;
+  }
+  
+  .footer {
+      height: 60px;
+      width: 100%;
+      background-color: rgba(18, 18, 19, 0.5);
+      border-radius: 200px 200px 0 0;
+      position: absolute;
+      bottom: 0; 
+      display: flex;
+      justify-content: center;
+  }
+  
